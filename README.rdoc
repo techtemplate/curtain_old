@@ -1,1 +1,15 @@
-== Tech Template
+## Getting the sub domain spike
+
+Currently done in the most ghetto way imaginable.
+
+* In /etc/hosts add these two lines
+
+    127.0.0.1 mike.localhost.com
+    127.0.0.1 dave.localhost.com
+
+* In rails console run
+
+    Customer.new(name:'mike', color:'FFE9E9').save
+    Customer.new(name:'dave', color:'E9FFE9').save
+
+Then you can goto either http://dave.localhost.com:3000 or http://mike.localhost.com:3000
