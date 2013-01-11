@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.10'
-gem 'mongo_mapper'
-gem 'bson_ext'
+gem 'mongoid', '~> 3.0.17'
 gem 'jquery-rails'
 
 # Gems used only for assets and not required

@@ -1,6 +1,8 @@
 class Customer
-  include MongoMapper::Document
+  include Mongoid::Document
 
-  key :name, String, :required => true, :unique => true
-  key :color, String
+  field :name, type: String
+  field :color, type: String
+
+  validates :name, presence: true,  uniqueness: true
 end
