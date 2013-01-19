@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'mongoid', '~> 3.0.17'
 gem 'jquery-rails'
 gem 'unicorn'
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.
