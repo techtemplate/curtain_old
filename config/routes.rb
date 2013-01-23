@@ -1,7 +1,7 @@
 Curtain::Application.routes.draw do
-  root :to => 'curtain#index'
+  constraints(Subdomain) do
+    root :to => 'curtain#index'
+  end
 
-  match "/home" => "home#index"
+  root :to =>  "home#index"
 end
-
-
