@@ -5,7 +5,6 @@ gem 'mongoid', '~> 3.0.17'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'therubyracer'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -19,9 +18,11 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'awesome_print'
-  gem 'rspec-rails', '~> 2.0'
-  gem 'capybara'
+  gem 'awesome_print', :require => false
+  gem 'capistrano', :require => false
+  gem 'capistrano-ext', :require => false
+  gem 'capybara', :require => false
+  gem 'rspec-rails', '~> 2.0', :require => false
 end
 
 # To use ActiveModel has_secure_password
@@ -29,9 +30,6 @@ end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
-# Deploy with Capistrano
-# gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
