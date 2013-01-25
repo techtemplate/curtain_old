@@ -1,5 +1,8 @@
 require 'capistrano'
+require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
+
+set :bundle_flags, "--deployment --quiet --binstubs"
 
 set :stages, ['vagrant'] #, 'production']
 set :default_stage, 'vagrant'
@@ -14,6 +17,10 @@ set :deploy_via, :remote_cache
 
 set :user,  'deploy'
 ssh_options[:forward_agent] = true
+
+set :default_environment, {
+  'PATH' => "/opt/rbenv/shims/:/opt/rbenv/bin:$PATH"
+}
 
 # role :web, "your web-server here"                          # Your HTTP server, Apache/etc
 # role :app, "your app-server here"                          # This may be the same as your `Web` server
