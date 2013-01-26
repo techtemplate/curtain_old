@@ -2,7 +2,7 @@ require 'capistrano'
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 
-set :bundle_flags, "--deployment --quiet --binstubs"
+set :bundle_flags, "--deployment --quiet --binstubs --without=assets"
 
 set :stages, ['vagrant', 'production']
 set :default_stage, 'vagrant'
