@@ -4,7 +4,7 @@ require 'capistrano/ext/multistage'
 
 set :bundle_flags, "--deployment --quiet --binstubs"
 
-set :stages, ['vagrant'] #, 'production']
+set :stages, ['vagrant', 'production']
 set :default_stage, 'vagrant'
 
 set :application, 'curtain'
@@ -13,6 +13,7 @@ set :scm, :git
 set :repository,  'git@github.com:techtemplate/curtain.git'
 set :branch, 'master'
 set :deploy_via, :remote_cache
+set :keep_releases, 5
 #set :git_shallow_clone, 1
 
 set :user,  'deploy'
