@@ -5,7 +5,7 @@ load 'config/deploy' # remove this line to skip loading any of the default tasks
 
 namespace :deploy do
   task :link_config do
-    run link_config('unicorn.yml')
+    run link_config('unicorn.rb')
     run link_config('mongoid.yml')
   end
 
