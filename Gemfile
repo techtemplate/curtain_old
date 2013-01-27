@@ -4,6 +4,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.11'
 gem 'mongoid', '~> 3.0.17'
+gem 'newrelic_rpm'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'therubyracer', :platforms => :ruby
