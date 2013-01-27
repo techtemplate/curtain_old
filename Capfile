@@ -7,6 +7,7 @@ namespace :deploy do
   task :symlink_config do
     run link_config('unicorn.rb')
     run link_config('mongoid.yml')
+    run link_config('newrelic.yml')
   end
 
   task :restart do
