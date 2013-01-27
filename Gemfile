@@ -4,9 +4,9 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.11'
 gem 'mongoid', '~> 3.0.19'
-gem 'newrelic_rpm'
-gem 'jquery-rails'
-gem 'unicorn'
+gem 'newrelic_rpm', '~> 3.5.5.38'
+gem 'jquery-rails', '~> 2.2.0'
+gem 'unicorn', '~> 4.5.0'
 gem 'therubyracer', :platforms => :ruby
 
 # Gems used only for assets and not required
@@ -19,9 +19,9 @@ end
 
 group :test, :development do
   gem 'awesome_print', :require => false
-  gem 'capistrano', :require => false
+  gem 'capistrano', '~> 2.14.1', :require => false
   gem 'capistrano-ext', :require => false
-  gem 'capybara', :require => false
+  gem 'capybara', '~> 2.0.2', :require => false
   gem 'rspec-rails', '~> 2.0', :require => false
 end
 
